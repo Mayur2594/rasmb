@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/materialize.scss" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoYvUuEvlrg2fMQ4exbBTK0NX5p1R5gdA">
+	</script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+    <script src="angular/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="angular/ngStorage.min.js"></script>
+    <script src="angular/ng-cordova.min.js"></script>
+    <script type="text/javascript" src="angular/RasoiApp.js"></script>
+    <script src="cordova.js"></script>
+</head>
+<body ng-app="RasoiApp" ng-controller="rasoiController">
+  <div ng-include="'./Navbar.html'"></div>
+  <div class="row mt-6" >
+    <div id="home" class="row">
+      <div ng-include="'./Tab_home.html'"></div>
+    </div>
+    <div id="explore" class="col s12">
+
+        <div ng-include="'./Tab_explore.html'"></div>
+
+    </div>
+    <div id="cart" class="col s12"><a href="#test4">Go to tab 4</a></div>
+    <div id="account" class="col s12"><a href="#test1">Go to tab 1</a></div>
+
+    <div class="col s12 no-pd fixed-tab-bottom">
+      <ul class="tabs tabs-icon">
+        <li class="tab col s3"  ng-click="FunctionofHomeTab()"><a href="#home"><i class="material-icons">home</i>Home</a></li>
+        <li class="tab col s3"><a href="#explore"><i class="material-icons">search</i>Explore</a></li>
+        <li class="tab col s3"><a href="#cart"><i class="material-icons">shopping_cart</i>Cart</a></li>
+        <li class="tab col s3"><a href="#account"><i class="material-icons">face</i>Account</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

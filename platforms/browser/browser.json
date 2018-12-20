@@ -1,0 +1,42 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.threesainfoway.rasoi"
+        },
+        "aerogear-cordova-oauth2": {
+            "PACKAGE_NAME": "com.threesainfoway.rasoi"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.threesainfoway.rasoi"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/es6-promise-plugin/www/promise.js",
+            "id": "es6-promise-plugin.Promise",
+            "pluginId": "es6-promise-plugin",
+            "runs": true
+        },
+        {
+            "file": "plugins/aerogear-cordova-oauth2/www/oauth2.js",
+            "id": "aerogear-cordova-oauth2.oauth2",
+            "pluginId": "aerogear-cordova-oauth2",
+            "clobbers": [
+                "oauth2"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "es6-promise-plugin": "4.2.2",
+        "aerogear-cordova-oauth2": "1.0.5",
+        "cordova-plugin-geolocation": "4.0.1"
+    }
+}

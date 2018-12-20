@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="google-signin-client_id" content="438977376170-cn0euun5dmv48cl351htuk03i3kt9svm.apps.googleusercontent.com">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/materialize.scss" />
+    <link rel="stylesheet" href="css/sweetalert.css"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+    <script src="angular/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="angular/ngStorage.min.js"></script>
+    <script src="angular/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="angular/RasoiAppLoagin.js"></script>
+</head>
+
+<body ng-app="RasoiApp" ng-controller="rasoiController">
+      
+       
+  
+        <div class="container" style="overflow: auto;">
+
+            <div class="col s12 center-align textbggrdienttheme boldtext"><h3>Rasoi</h3></div>
+            <div class="col s12 center">
+              
+              <img src="img/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png" class="responsive-img" height="70px" width="70px">
+            </div>
+
+          <div class="row" style="display: inline-block; padding: 0 25px; ">
+  
+            <form class="col s12" method="post">
+              <div class='row'>
+                <div class='col s12'>
+                </div>
+              </div>
+  
+              <div class='row'>
+                    <div class='input-field col s12'>
+                      <input class='validate' type='text' name='name' id='name' ng-model="user.name"/>
+                      <label for='name'>Name</label>
+                    </div>
+                  </div>
+
+              <div class='row'>
+                <div class='input-field col s12'>
+                  <input class='validate' type='number' name='mobile' id='mobile' ng-model="user.mobile"/>
+                  <label for='mobile'>Mobile No.</label>
+                </div>
+              </div>
+  
+              <div class='row'>
+                <div class='input-field col s12'>
+                  <input class='validate' type='password' name='password' id='password' ng-model="user.password" />
+                  <label for='password'>Password</label>
+                </div>
+                <label class="right grey-text text-darken-2">
+                     Password`s length must be minimum 8 characters
+                </label>
+              </div>
+
+              <div class='row'>
+                    <div class='input-field col s12'>
+                      <input class='validate' type='password' name='password' id='confpassword' ng-model="Confirm_Password" />
+                      <label for='confpassword'>Confirm Password</label>
+                    </div>
+                    <label class="right">
+                        <a class='red-text text-darken-2' ng-if="Confirm_Password && Confirm_Password != user.password" href='#!'><b>Password does not match with this.</b></a>
+                    </label>
+                  </div>
+  
+              <br />
+               <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect red' ng-click="NewMemberRegister()">Register</button>
+              </div>
+                <div class="row">
+              <div class="col s12 center-align">
+
+               <a class="center-align" href="Signin.html"><label style="font-size:18px;"><b>Sign-in</b></label></a>
+
+              </div>
+              
+            </div>
+           
+              </form>
+              </div>
+             
+              </div>
+               
+            
+</body>
+
+</html>

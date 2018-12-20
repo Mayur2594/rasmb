@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/materialize.scss" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOHR6tXp2hG0STMmTwDkC2sc945zL7atM">
+    </script> -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOHR6tXp2hG0STMmTwDkC2sc945zL7atM&libraries=places,geometry"
+        async defer></script> 
+    
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+    <script src="angular/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="angular/ngStorage.min.js"></script>
+    <script src="angular/ng-cordova.min.js"></script>
+    <script type="text/javascript" src="angular/RasoiApp.js"></script>
+    <script src="cordova.js"></script>
+</head>
+<body ng-app="RasoiApp" ng-controller="rasoiController">
+
+
+    <div class="container" style="overflow: hidden;"> 
+    
+        <div class="row mt-6">
+            <div class="row"  ng-if="successinlocation">
+          <div class="col s2"></div>
+            <div class="col s8 mt-4" ng-init="CaptuetCurrentLocation()">
+                <img class="responsive-img" src="img/splashscreen/map.png">
+            </div>
+            <div class="col s2"></div>
+        </div>
+        <div class="row"  ng-show="LocationCaptured">
+               
+                  <div class="col s12 mt-4">
+                      <div id="map" style="height:350px;"></div>
+                  </div>
+                  
+              </div>
+            <div class="col s12">
+                    <p class="flow-text left-align"><i class="fa fa-spinner fa-spin fa-1x fa-fw" ng-if="address"></i>&nbsp;
+                        {{formatedaddress}}</p>
+            </div>
+            <div class="col s12">
+                    <p class="flow-text">Address for:</p>
+                    <h5 class="left boldtext textbggrdienttheme" ng-click="SaveAddressAtLocal(formatedaddress,'Home')">Home</h5><h5 class="right boldtext textbggrdienttheme" ng-click="SaveAddressAtLocal(formatedaddress,'Work')">Work</h5>
+            </div>
+        </div>
+    
+    </div>
+
+</body>
+
+</html>

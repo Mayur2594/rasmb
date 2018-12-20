@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/materialize.scss" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOHR6tXp2hG0STMmTwDkC2sc945zL7atM&libraries=places,geometry"
+        async defer></script> 
+    <script src="js/angular-sanitize.min.js"></script>
+    <script src="angular/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="angular/ngStorage.min.js"></script>
+    <script src="angular/ng-cordova.min.js"></script>
+    <script type="text/javascript" src="angular/RasoiAppLoagin.js"></script>
+    <script src="cordova.js"></script>
+</head>
+<body ng-app="RasoiApp" ng-controller="rasoiController">
+
+
+    <div class="container" style="overflow: hidden;">
+    
+        <div class="row mt-6">
+          <div class="col s1"></div>
+            <div class="col s10 mt-6 valign-wrapper">
+                <img class="responsive-img" src="img/splashscreen/rasoi.gif" ng-init="NextToLocation()">
+            </div>
+            <div class="col s1"></div>
+        </div>
+    
+    </div>
+
+</body>
+
+</html>

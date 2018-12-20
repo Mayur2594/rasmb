@@ -1,0 +1,102 @@
+<script>
+    $(document).ready(function () {
+  
+      $('.modal').modal();
+    
+      $('select').formSelect();
+    
+  
+    });
+  </script>
+
+<div ng-init="FunctionofHomeTab()"></div>
+<div class="row" id="carosel">
+  
+</div>
+
+<div class="col s12">
+
+    <div class="row">
+        <div class="col s6 left">
+            <strong class=" grey-text text-darken-1">10 Restraurents</strong>
+        </div>
+        <div class="col s6 right">
+            <a class="waves-effect modal-trigger right" href="#modal1"><strong class=" grey-text text-darken-1 right-align"><i class="fa fa-filter" aria-hidden="true"></i> Sort / Filters</strong></a>
+        </div>
+      </div>
+
+  <div class="row" ng-repeat="obj in RestaurentsList">
+    <div class="col s4" ng-click="RedirectToDetails(obj.id)">
+      <img class="thumbnail-img" src="http://103.252.7.5:8821/uploads/{{obj.image}}" height="100" width="150">
+  </div>
+
+  <div class="col s8">
+    <strong class="grey-text text-darken-4 left-align retroname" style="font-size:21px;font-weight: bolder;"><span class="new badge green" data-badge-caption="Likes">{{obj.totallikes}}</span>{{obj.name}}</strong>
+    <h6>{{obj.type}}</h6>
+     <hr class="mt-2 dots"> 
+    <div class="left col s12">
+        <i class="material-icons red-text text-darken-4" id="fav{{$index}}" style="font-size: 24px;" ng-click="Likerestro('fav'+$index,obj.id)">favorite_border</i>
+        <!-- <i class="fa fa-heart-o red-text text-darken-4" id="fav{{$index}}" style="font-size: 24px;" ng-click="hitlike($index)" aria-hidden="true"></i> -->
+        <i class="fa fa-clock-o grey-text text-darken-1 right" style="font-size: 15px;"> 25 min.</i>
+    </div>
+  </div>
+
+  </div>
+
+
+  
+  <!-- Modal Trigger -->
+  
+
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h5><b>Sort / Filters</b></h5>
+      <div class="col s12 mt-2">
+        <strong style="font-size: 20px;">Type</strong>
+        <div class="col s12 mt-1">
+          <div class="col s4">
+              <i class="material-icons">center_focus_strong</i> Veg
+          </div>
+          <div class="col s8">
+              <i class="material-icons">center_focus_strong</i> Non-Veg
+          </div>
+        </div>
+      </div>
+      <div class="col s12 mt-3">
+          <strong style="font-size: 20px;">Distance </strong>
+          <div class="col s12">
+              <div class="input-field col s12">
+                  <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Within 1Km</option>
+                    <option value="2">Within 2Km</option>
+                    <option value="5">Within 5Km</option>
+                    <option value="10">Within 10Km</option>
+                  </select>
+                </div>
+          </div>
+        </div>
+        <div class="col s12 mt-3">
+            <i class="material-icons red-text">favorite</i> <strong style="font-size: 20px;">Most Liked </strong>
+            
+          </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Apply</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- <div class="col s6" ng-repeat="obj in RestaurentsList">
+  <div class="card" ng-click="RedirectToDetails(obj.id)">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="http://103.252.7.5:8821/uploads/{{obj.image}}" height="120">
+    </div>
+    <div class="card-content">
+      <strong class="grey-text text-darken-4 left" style="margin-top:-20px;position: absolute;left: 5px;font-size: 18px;">{{obj.name}}</strong>
+    </div>
+  </div>
+</div> -->

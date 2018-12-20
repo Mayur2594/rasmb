@@ -1,0 +1,74 @@
+{
+  "_from": "aerogear-cordova-oauth2",
+  "_id": "aerogear-cordova-oauth2@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha1-QQ9VEQHJXXFT8f+NKOB+gwiMRlk=",
+  "_location": "/aerogear-cordova-oauth2",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "aerogear-cordova-oauth2",
+    "name": "aerogear-cordova-oauth2",
+    "escapedName": "aerogear-cordova-oauth2",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/aerogear-cordova-oauth2/-/aerogear-cordova-oauth2-1.0.5.tgz",
+  "_shasum": "410f551101c95d7153f1ff8d28e07e83088c4659",
+  "_spec": "aerogear-cordova-oauth2",
+  "_where": "D:\\CORDOVAPROJECT\\Rasoi",
+  "author": {
+    "name": "edewit"
+  },
+  "bugs": {
+    "url": "https://github.com/aerogear/aerogear-cordova-oauth2"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "aerogear-cordova-oauth2",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8"
+    ]
+  },
+  "deprecated": false,
+  "description": "The plugin handles OAuth2 *authorization code grant* in a secure manner. The OAuth2 dance uses external browser approach, OAuth2 access and refresh tokens are stored securely encrypted in your native device. Supports iOS, android and windows phone platforms.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "homepage": "https://github.com/aerogear/aerogear-cordova-oauth2",
+  "keywords": [
+    "cordova",
+    "aerogear",
+    "oath2",
+    "google",
+    "keycloak",
+    "facebook",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8"
+  ],
+  "license": "Apache2",
+  "name": "aerogear-cordova-oauth2",
+  "platforms": [
+    "android",
+    "ios",
+    "wp8"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aerogear/aerogear-cordova-oauth2.git"
+  },
+  "version": "1.0.5"
+}

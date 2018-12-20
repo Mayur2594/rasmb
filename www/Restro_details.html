@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/materialize.scss" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoYvUuEvlrg2fMQ4exbBTK0NX5p1R5gdA">
+	</script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+    <script src="angular/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="angular/ngStorage.min.js"></script>
+    <script src="angular/ng-cordova.min.js"></script>
+    <script type="text/javascript" src="angular/RasoiApp.js"></script>
+    <script src="cordova.js"></script>
+</head>
+<body ng-app="RasoiApp" ng-controller="rasoiController">
+  <div ng-include="'./navbarinner.html'"></div>
+         <div class="row mt-55 ">
+            
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/1.jpg">
+                      <span class="card-title">Card Title</span>
+                      <a class="btn-floating btn-large halfway-fab waves-effect waves-light red" ng-click="Likerestro()"><i id="iconlike" class="material-icons">favorite_border</i></a>
+                    </div>
+                    <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information.
+                      I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#">This is a link</a>
+                    </div>
+                    
+                  </div>
+               
+                  <div class="row mt-1">
+                        <div class="col s6" ng-repeat="obj in [1,2,3,4]">
+                                <div class="card">
+                                        <div class="card-image">
+                                          <img src="images/{{obj}}.jpg" height="120">
+                                         
+                                          <a class="btn-floating halfway-fab waves-effect waves-light btnaddcart"><i class="material-icons">add</i></a>
+                                        </div>
+                                        <div class="card-content">
+                                            <p><span class="card-title activator grey-text text-darken-4">Card Title</span>
+                                                $20
+                                            </p>
+                                        </div>
+                                      </div>
+                        </div>
+                      </div>
+
+
+
+                
+  </div>
+</body>
+
+</html>
